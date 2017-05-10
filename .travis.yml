@@ -98,11 +98,9 @@ install:
 
 script:
     - install_run $PLAT
-
-after_success:
-    # Upload wheels to Rackspace container
-    - pip install wheelhouse-uploader
-    - python -m wheelhouse_uploader upload --local-folder
-          ${TRAVIS_BUILD_DIR}/wheelhouse/
-          --no-update-index
-          wheels
+deploy:
+  provider: releases
+  api-key: ${GITHUB_OAUTH}
+  file_glob: true
+  file: ${TRAVIS_BUILD_DIR}/wheelhouse/*
+  skip_cleanup: true
