@@ -107,7 +107,8 @@ artifacts:
 deploy:
   description: 'Release description'
   provider: GitHub
-  auth_token: %GITHUB_OAUTH% # your encrypted token from GitHub
+  auth_token:
+    secure:  bI6GYeyJ7KtXNawOBMr7zWxzI5B+7yX9K1oarJZoofcSU/GWUr0tDxiLvbIK//IS  # your encrypted token from GitHub
   artifact: pyedflib\dist\*            # upload all NuGet packages to release assets
   draft: false
   prerelease: false
