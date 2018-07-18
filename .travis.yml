@@ -1,7 +1,7 @@
 env:
   global:
       - REPO_DIR="pyedflib"
-      - BUILD_COMMIT=v0.1.12
+      - BUILD_COMMIT=v0.1.13
       - BUILD_DEPENDS="Cython numpy"
       - PLAT=x86_64
       - UNICODE_WIDTH=32
